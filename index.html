@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Shotokan Strength & Power Karate Class</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-top:#07090b;
+    --bg-bottom:#400a0a;
+    --card-glass: rgba(255,255,255,0.04);
+    --muted:#e7e7e7;
+    --accent:#d61b1b;
+    --grey-box:#1f2a31;
+    --glass-shadow: 0 18px 40px rgba(0,0,0,0.7);
+  }
+
+  html,body {
+    height:100%; margin:0; font-family:"Poppins",system-ui,Arial; color:#f3f3f3;
+    background: linear-gradient(180deg,var(--bg-top) 0%,#0b0c0d 35%,#1b0b0b 60%,var(--bg-bottom) 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* header */
+  .header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 48px; gap:20px;
+  }
+  .brand {display:flex; align-items:center; gap:14px;}
+  .logo {
+    width:56px; height:56px; border-radius:8px; background:var(--accent);
+    display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff;
+    box-shadow:0 6px 18px rgba(214,27,27,0.12), inset 0 -6px 18px rgba(0,0,0,0.25);
+    flex-shrink:0;
+  }
+  .brand h1 {font-size:20px; margin:0; color:#fff; font-weight:700;}
+  .brand p {margin:0; color:#bfc8cf; font-size:13px; opacity:0.9;}
+  .cta-top {
+    background:var(--accent); color:#fff; padding:10px 18px; border-radius:8px; font-weight:600;
+    box-shadow:0 8px 30px rgba(214,27,27,0.15); border:none; cursor:pointer; transition:all .2s;
+  }
+  .cta-top:hover {background:#b61616; transform:translateY(-2px);}
+  .cta-top:active {transform:translateY(1px);}
+
+  /* main layout */
+  .container {max-width:1200px; margin:36px auto; padding:0 28px 80px;}
+  .two-col {display:grid; grid-template-columns: 1fr 360px; gap:28px; align-items:start;}
+
+  /* glass card */
+  .glass-card {
+    background:var(--card-glass);
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    box-shadow:var(--glass-shadow); border-radius:16px;
+  }
+
+  /* hero */
+  .hero-card {padding:34px; display:flex; gap:28px; align-items:flex-start; animation:fadeInUp .6s ease;}
+  @keyframes fadeInUp {from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}}
+  .hero-left {flex:1;}
+  .headline {font-size:44px; line-height:1.02; margin:6px 0 18px; font-weight:800; color:#fff; text-shadow:0 6px 30px rgba(0,0,0,0.7);}
+  .subline {color:#cfd6da; margin-bottom:18px; font-size:15px;}
+  .bullets {color:#d6d6d6; margin-top:12px; line-height:1.9; font-size:14px;}
+  .hero-actions {margin-top:20px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-red {
+    background:var(--accent); color:#fff; padding:12px 22px; border-radius:10px; border:none; font-weight:700;
+    box-shadow:0 10px 30px rgba(214,27,27,0.14); cursor:pointer; transition:.2s;
+  }
+  .btn-red:hover {background:#b61616; transform:translateY(-2px);}
+  .btn-ghost {
+    background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff;
+    padding:12px 18px; border-radius:10px; font-weight:600; cursor:pointer; transition:.2s;
+  }
+  .btn-ghost:hover {border-color:var(--accent); color:var(--accent);}
+  .hero-right {
+    width:300px; border-radius:14px; background:var(--accent); display:flex; align-items:center; justify-content:center;
+    color:#fff; font-weight:700; box-shadow:0 18px 40px rgba(0,0,0,0.6);
+  }
+
+  /* sidebar */
+  .side-card {padding:26px;}
+  .side-card h3 {color:#fff; margin:0 0 12px; font-size:20px;}
+  .side-card p {color:#d7d7d7; font-size:14px; margin:8px 0;}
+  .side-cta button {
+    width:100%; padding:12px 0; border-radius:10px; background:var(--accent);
+    border:none; color:#fff; font-weight:700; cursor:pointer; transition:.2s;
+  }
+  .side-cta button:hover {background:#b61616;}
+
+  /* schedule */
+  .section-title {font-size:24px; margin:44px 0 12px; color:#fff; font-weight:700;}
+  .schedule-row {display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; margin-bottom:38px;}
+  .sched-card {padding:20px; min-height:140px; transition:transform .28s cubic-bezier(.2,.9,.3,1);}
+  .sched-card:hover {transform:translateY(-8px);}
+  .sched-card h4 {margin:0 0 12px; color:#f3f3f3;}
+  .sched-card ul {color:#d6d6d6; margin-left:18px; line-height:1.9;}
+
+  /* gallery */
+  .bottom-grid {display:grid; grid-template-columns:1fr 420px; gap:28px; margin-top:10px;}
+  .gallery-box {padding:20px;}
+  .gallery-row {display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap;}
+  .thumb {
+    width:120px; height:110px; background:var(--grey-box) center/cover no-repeat;
+    border-radius:8px; cursor:pointer; transition:.2s;
+  }
+  .thumb:hover {transform:scale(1.05);}
+  .events {padding:18px; color:#fff; margin-top:8px;}
+  .events h5 {margin:0 0 10px; font-weight:700;}
+  .events ul {margin-left:18px; color:#ffd6d6;}
+
+  /* contact */
+  .contact-card {padding:20px;}
+  .contact-card p {margin:6px 0;}
+  .contact-actions {margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;}
+  .contact-actions button {
+    padding:10px 16px; border-radius:8px; border:none; font-weight:700; cursor:pointer; transition:.2s;
+    color:#fff;
+  }
+  .contact-actions .btn-whatsapp {background:#25d366;}
+  .contact-actions .btn-instagram {background:#e1306c;}
+  .contact-actions button:hover {opacity:0.85;}
+
+  .map {width:100%; height:160px; border-radius:8px; margin-top:12px;}
+
+  /* footer */
+  footer {max-width:1200px; margin:32px auto; color:#b8b8b8; padding:0 28px 80px; text-align:center; font-size:13px;}
+
+  /* lightbox */
+  .lightbox {
+    display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%;
+    background:rgba(0,0,0,0.9); align-items:center; justify-content:center; flex-direction:column;
+  }
+  .lightbox img {max-width:90%; max-height:80%; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+  .lightbox .close {
+    position:absolute; top:20px; right:30px; font-size:40px; font-weight:bold; color:#fff; cursor:pointer;
+  }
+  .lightbox .prev,.lightbox .next {
+    position:absolute; top:50%; font-size:30px; padding:12px; color:#fff;
+    background:rgba(0,0,0,0.5); border:none; border-radius:50%; cursor:pointer; transform:translateY(-50%);
+  }
+  .lightbox .prev {left:40px;} .lightbox .next {right:40px;}
+  .lightbox .prev:hover,.lightbox .next:hover {background:rgba(214,27,27,0.8);}
+
+  /* FAQ specific */
+  #faqSelect {cursor:pointer;}
+  #faqAnswer {transition:all 0.3s;}
+
+  /* responsive */
+  @media (max-width:1000px) {
+    .two-col {grid-template-columns:1fr;}
+    .hero-right {width:160px; height:160px;}
+    .bottom-grid {grid-template-columns:1fr;}
+    .header {padding:16px 20px;}
+    .container {padding:0 18px;}
+    .headline {font-size:36px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="brand">
+    <img src="https://i.ibb.co/5gSLM420/Whats-App-Image-2025-09-18-at-09-40-47-cae91484.jpg" alt="Shotokan Logo" class="logo">
+    <div>
+      <h1>Shotokan Strength & Power Karate Class</h1>
+      <p>Discipline, Strength and Power - A Way of Life.</p>
+    </div>
+  </div>
+  <button class="cta-top" onclick="window.location='tel:+91 9993825365'">Call to Join</button>
+</header>
+
+<main class="container">
+  <!-- top two columns -->
+  <div class="two-col">
+    <div class="hero-card glass-card">
+      <div class="hero-left">
+        <div class="headline">Train with Senpai<br>Anirudh Sunhare</div>
+        <div class="subline">1st Degree International Black Belt • Gym Trainer (4+ yrs) • 8+ yrs Karate experience</div>
+        <div class="bullets">
+          <ul>
+            <li>Personal training, fat loss & fitness programs</li>
+            <li>All Ages Welcome — kids, teens, adults</li>
+            <li>Fully equipped dojo: mats, power pads, safe training space</li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-red" onclick="window.location='tel:+91 9993825365'">Call to Register</button>
+          <button class="btn-ghost">View Schedule</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://i.ibb.co/27gQ5W8h/Whats-App-Image-2025-09-17-at-18-33-17-73202255.jpg" alt="Shotokan" style="max-width:80%;border-radius:12px;">
+      </div>
+    </div>
+
+    <aside class="side-card glass-card">
+      <h3>Fees Section</h3>
+      <p>• Monthly: ₹1000</p>
+      <p>• Yearly: ₹10,000 (₹2000 discount)</p>
+      <p>• Trial: 2 days — ₹200</p>
+      <p>• Monthly: Freelancing Personal Training — ₹5000</p>
+      <div class="side-cta"><button onclick="window.location='tel:+91 9993825365'">Call to Book Slot</button></div>
+    </aside>
+  </div>
+
+  <!-- Class Schedule -->
+  <h2 class="section-title">Class Schedule</h2>
+  <div class="schedule-row">
+    <div class="sched-card glass-card">
+      <h4>Morning</h4>
+      <ul><li>6 AM – 7 AM</li><li>7 AM – 8 AM</li><li>8 AM – 9 AM</li></ul>
+    </div>
+    <div class="sched-card glass-card">
+      <h4>Evening</h4>
+      <ul><li>4 PM – 5 PM</li><li>5 PM – 6 PM</li><li>6 PM – 7 PM</li><li>7 PM – 8 PM</li><li>8 PM – 9 PM</li></ul>
+    </div>
+    <div class="sched-card glass-card">
+      <h4>Notes</h4>
+      <ul><li>You can choose any one hour time slot</li><li>All ages welcome</li></ul>
+    </div>
+  </div>
+
+  <!-- About the Dojo -->
+  <section class="glass-card" style="padding:26px; margin-top:30px;">
+    <h3>About Our Dojo</h3>
+    <p>Shotokan Strength & Power Karate Class is dedicated to teaching traditional Karate with modern training techniques. Our philosophy emphasizes discipline, respect, focus, and personal growth. Students not only learn self-defense but also improve their confidence and physical fitness.</p>
+  </section>
+
+  <!-- Benefits of Karate -->
+  <section class="glass-card" style="padding:26px; margin-top:30px;">
+    <h3>Benefits of Learning Karate</h3>
+    <ul>
+      <li>Enhances physical fitness and flexibility</li>
+      <li>Builds mental discipline and focus</li>
+      <li>Teaches practical self-defense techniques</li>
+      <li>Boosts confidence and self-esteem</li>
+      <li>Encourages teamwork and social skills</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="glass-card" style="padding:26px; margin-top:30px;">
+    <h3>What Our Students Say</h3>
+    <p>"Joining Shotokan Karate has improved my focus and fitness. The trainers are excellent!" – Neil D.</p>
+ <p>"This is the best training for self defense!" – Somya C.</p>
+    <p>"My daughter loves the classes and has gained confidence and discipline." – Priya M.</p>
+    <p>"The dojo environment is welcoming and motivating. Highly recommend!" – Mehul K.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="glass-card" style="padding:26px; margin-top:30px; background:#fff; color:#000;">
+    <h3>Frequently Asked Questions</h3>
+    <select id="faqSelect" style="width:100%; padding:10px; border-radius:6px; margin-top:12px; border:1px solid #ccc;">
+      <option value="">Select a question...</option>
+      <option value="q1">What age groups can join?</option>
+      <option value="q2">Can beginners start anytime?</option>
+      <option value="q3">What should I wear for training?</option>
+      <option value="q4">Are uniforms included?</option>
+      <option value="q5">How do I register for a trial class?</option>
+    </select>
+    <div id="faqAnswer" style="margin-top:16px; padding:12px; background:#f5f5f5; border-radius:6px; min-height:60px;">
+      Please select a question to see the answer.
+    </div>
+  </section>
+
+  <!-- bottom grid -->
+  <div class="bottom-grid">
+    <div class="gallery-box glass-card">
+      <h3>Gallery & Events</h3>
+      <div class="gallery-row">
+        <div class="thumb" style="background-image:url('https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg')" onclick="openLightbox(0)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg')" onclick="openLightbox(1)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg')" onclick="openLightbox(2)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg')" onclick="openLightbox(3)"></div>
+      </div>
+      <div class="events glass-card">
+        <h5>Upcoming Events</h5>
+        <ul>
+          <li>Annual Tournament — Date to be announced</li>
+          <li>Belt Exams — Regular intervals</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-card glass-card">
+      <h3>Contact & Location</h3>
+      <p>📍  A-68, Abhinandan Nagar, Near Rajoria School, Indore-452010</p>
+      <p>📞 +91 9993825365</p>
+      <p>Google Maps: https://maps.app.goo.gl/bUq6ufaacSq9su9y7</p>
+      <div class="contact-actions">
+        <button class="btn-whatsapp" onclick="window.open('https://wa.me/919993825365','_blank')">WhatsApp Us</button>
+        <button class="btn-instagram" onclick="window.open('https://www.instagram.com/strength_and_power_karate_/','_blank')">Instagram</button>
+      </div>
+      
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Shotokan Strength & Power Karate Class. All rights reserved.
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <img id="lightboxImg" src="">
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+  /* FAQ */
+  const faqData = {
+    q1: "We welcome students of all ages, from 5 years old to adults.",
+    q2: "Yes, beginners can start anytime. Our classes are structured for all skill levels.",
+    q3: "Wear comfortable sports attire like a loar and simple T-shirt. Karate dress will be given after 3 months of training.",
+    q4: "Uniforms are available for purchase at the dojo but will be only given after 3 months of training.",
+    q5: "Please call us at +91 9993825365 to register for a 2-day trial class."
+  };
+  const faqSelect = document.getElementById("faqSelect");
+  const faqAnswer = document.getElementById("faqAnswer");
+  faqSelect.addEventListener("change", ()=> {
+    const val = faqSelect.value;
+    faqAnswer.textContent = val ? faqData[val] : "Please select a question to see the answer.";
+  });
+
+  /* Lightbox */
+  const images = [
+    'https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg',
+    'https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg',
+    'https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg',
+    'https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg'
+  ];
+  let currentSlide = 0;
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  function openLightbox(index){
+    currentSlide=index;
+    lightbox.style.display='flex';
+    lightboxImg.src=images[currentSlide];
+  }
+  function closeLightbox(){lightbox.style.display='none';}
+  function changeSlide(n){
+    currentSlide=(currentSlide+n+images.length)%images.length;
+    lightboxImg.src=images[currentSlide];
+  }
+</script>
+
+</body>
+</html>
