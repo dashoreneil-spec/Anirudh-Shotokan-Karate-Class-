@@ -16,32 +16,22 @@
     --glass-shadow: 0 18px 40px rgba(0,0,0,0.7);
   }
 
-  html,body {
-    height:100%; margin:0; font-family:"Poppins",system-ui,Arial; color:#f3f3f3;
+  html,body {height:100%; margin:0; font-family:"Poppins",system-ui,Arial; color:#f3f3f3;
     background: linear-gradient(180deg,var(--bg-top) 0%,#0b0c0d 35%,#1b0b0b 60%,var(--bg-bottom) 100%);
     background-attachment: fixed;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
   }
 
   /* header */
-  .header {
-    display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; gap:20px;
-  }
+  .header {display:flex; align-items:center; justify-content:space-between; padding:22px 48px; gap:20px;}
   .brand {display:flex; align-items:center; gap:14px;}
-  .logo {
-    width:56px; height:56px; border-radius:8px; background:var(--accent);
+  .logo {width:56px; height:56px; border-radius:8px; background:var(--accent);
     display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff;
-    box-shadow:0 6px 18px rgba(214,27,27,0.12), inset 0 -6px 18px rgba(0,0,0,0.25);
-    flex-shrink:0;
-  }
+    box-shadow:0 6px 18px rgba(214,27,27,0.12), inset 0 -6px 18px rgba(0,0,0,0.25); flex-shrink:0;}
   .brand h1 {font-size:20px; margin:0; color:#fff; font-weight:700;}
   .brand p {margin:0; color:#bfc8cf; font-size:13px; opacity:0.9;}
-  .cta-top {
-    background:var(--accent); color:#fff; padding:10px 18px; border-radius:8px; font-weight:600;
-    box-shadow:0 8px 30px rgba(214,27,27,0.15); border:none; cursor:pointer; transition:all .2s;
-  }
+  .cta-top {background:var(--accent); color:#fff; padding:10px 18px; border-radius:8px; font-weight:600;
+    box-shadow:0 8px 30px rgba(214,27,27,0.15); border:none; cursor:pointer; transition:all .2s;}
   .cta-top:hover {background:#b61616; transform:translateY(-2px);}
   .cta-top:active {transform:translateY(1px);}
 
@@ -50,11 +40,7 @@
   .two-col {display:grid; grid-template-columns: 1fr 360px; gap:28px; align-items:start;}
 
   /* glass card */
-  .glass-card {
-    background:var(--card-glass);
-    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-    box-shadow:var(--glass-shadow); border-radius:16px;
-  }
+  .glass-card {background:var(--card-glass); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); box-shadow:var(--glass-shadow); border-radius:16px;}
 
   /* hero */
   .hero-card {padding:34px; display:flex; gap:28px; align-items:flex-start; animation:fadeInUp .6s ease;}
@@ -64,29 +50,21 @@
   .subline {color:#cfd6da; margin-bottom:18px; font-size:15px;}
   .bullets {color:#d6d6d6; margin-top:12px; line-height:1.9; font-size:14px;}
   .hero-actions {margin-top:20px; display:flex; gap:14px; flex-wrap:wrap;}
-  .btn-red {
-    background:var(--accent); color:#fff; padding:12px 22px; border-radius:10px; border:none; font-weight:700;
-    box-shadow:0 10px 30px rgba(214,27,27,0.14); cursor:pointer; transition:.2s;
-  }
+  .btn-red {background:var(--accent); color:#fff; padding:12px 22px; border-radius:10px; border:none; font-weight:700;
+    box-shadow:0 10px 30px rgba(214,27,27,0.14); cursor:pointer; transition:.2s;}
   .btn-red:hover {background:#b61616; transform:translateY(-2px);}
-  .btn-ghost {
-    background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff;
-    padding:12px 18px; border-radius:10px; font-weight:600; cursor:pointer; transition:.2s;
-  }
+  .btn-ghost {background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff;
+    padding:12px 18px; border-radius:10px; font-weight:600; cursor:pointer; transition:.2s;}
   .btn-ghost:hover {border-color:var(--accent); color:var(--accent);}
-  .hero-right {
-    width:300px; border-radius:14px; background:var(--accent); display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:700; box-shadow:0 18px 40px rgba(0,0,0,0.6);
-  }
+  .hero-right {width:300px; border-radius:14px; background:var(--accent); display:flex; align-items:center; justify-content:center;
+    color:#fff; font-weight:700; box-shadow:0 18px 40px rgba(0,0,0,0.6);}
 
   /* sidebar */
   .side-card {padding:26px;}
   .side-card h3 {color:#fff; margin:0 0 12px; font-size:20px;}
   .side-card p {color:#d7d7d7; font-size:14px; margin:8px 0;}
-  .side-cta button {
-    width:100%; padding:12px 0; border-radius:10px; background:var(--accent);
-    border:none; color:#fff; font-weight:700; cursor:pointer; transition:.2s;
-  }
+  .side-cta button {width:100%; padding:12px 0; border-radius:10px; background:var(--accent);
+    border:none; color:#fff; font-weight:700; cursor:pointer; transition:.2s;}
   .side-cta button:hover {background:#b61616;}
 
   /* schedule */
@@ -101,28 +79,15 @@
   .bottom-grid {display:grid; grid-template-columns:1fr 420px; gap:28px; margin-top:10px;}
   .gallery-box {padding:20px;}
   .gallery-row {display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap;}
-  .thumb {
-    width:120px; height:110px; background:var(--grey-box) center/cover no-repeat;
-    border-radius:8px; cursor:pointer; transition:.2s; overflow:hidden;
-    display:inline-block;
-  }
+  .thumb {width:120px; height:110px; background:var(--grey-box) center/cover no-repeat; border-radius:8px; cursor:pointer; transition:.2s; overflow:hidden; display:inline-block; justify-content:center; align-items:center; display:flex;}
   .thumb:hover {transform:scale(1.05);}
-  .thumb .play {
-    font-size:28px; color:#fff; background:rgba(214,27,27,0.95); padding:6px 10px; border-radius:8px;
-    display:inline-block;
-  }
-  .events {padding:18px; color:#fff; margin-top:8px;}
-  .events h5 {margin:0 0 10px; font-weight:700;}
-  .events ul {margin-left:18px; color:#ffd6d6;}
+  .thumb .play {font-size:28px; color:#fff; background:rgba(214,27,27,0.95); padding:6px 10px; border-radius:8px; display:inline-block;}
 
   /* contact */
   .contact-card {padding:20px;}
   .contact-card p {margin:6px 0;}
   .contact-actions {margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;}
-  .contact-actions button {
-    padding:10px 16px; border-radius:8px; border:none; font-weight:700; cursor:pointer; transition:.2s;
-    color:#fff;
-  }
+  .contact-actions button {padding:10px 16px; border-radius:8px; border:none; font-weight:700; cursor:pointer; transition:.2s; color:#fff;}
   .contact-actions .btn-whatsapp {background:#25d366;}
   .contact-actions .btn-instagram {background:#e1306c;}
   .contact-actions button:hover {opacity:0.85;}
@@ -133,34 +98,17 @@
   footer {max-width:1200px; margin:32px auto; color:#b8b8b8; padding:0 28px 80px; text-align:center; font-size:13px;}
 
   /* lightbox */
-  .lightbox {
-    display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%;
-    background:rgba(0,0,0,0.9); align-items:center; justify-content:center; flex-direction:column;
-  }
-  .lightbox img {max-width:90%; max-height:80%; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.6);}
-  .lightbox .close {
-    position:absolute; top:20px; right:30px; font-size:40px; font-weight:bold; color:#fff; cursor:pointer;
-  }
-  .lightbox .prev,.lightbox .next {
-    position:absolute; top:50%; font-size:30px; padding:12px; color:#fff;
-    background:rgba(0,0,0,0.5); border:none; border-radius:50%; cursor:pointer; transform:translateY(-50%);
-  }
+  .lightbox {display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; flex-direction:column;}
+  .lightbox img, .lightbox video {max-width:90%; max-height:80%; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+  .lightbox .close {position:absolute; top:20px; right:30px; font-size:40px; font-weight:bold; color:#fff; cursor:pointer;}
+  .lightbox .prev,.lightbox .next {position:absolute; top:50%; font-size:30px; padding:12px; color:#fff; background:rgba(0,0,0,0.5); border:none; border-radius:50%; cursor:pointer; transform:translateY(-50%);}
   .lightbox .prev {left:40px;} .lightbox .next {right:40px;}
   .lightbox .prev:hover,.lightbox .next:hover {background:rgba(214,27,27,0.8);}
 
-  /* FAQ specific */
   #faqSelect {cursor:pointer;}
   #faqAnswer {transition:all 0.3s;}
 
-  /* responsive */
-  @media (max-width:1000px) {
-    .two-col {grid-template-columns:1fr;}
-    .hero-right {width:160px; height:160px;}
-    .bottom-grid {grid-template-columns:1fr;}
-    .header {padding:16px 20px;}
-    .container {padding:0 18px;}
-    .headline {font-size:36px;}
-  }
+  @media (max-width:1000px) {.two-col {grid-template-columns:1fr;} .hero-right {width:160px; height:160px;} .bottom-grid {grid-template-columns:1fr;} .header {padding:16px 20px;} .container {padding:0 18px;} .headline {font-size:36px;}}
 </style>
 </head>
 <body>
@@ -177,7 +125,6 @@
 </header>
 
 <main class="container">
-  <!-- top two columns -->
   <div class="two-col">
     <div class="hero-card glass-card">
       <div class="hero-left">
@@ -210,7 +157,6 @@
     </aside>
   </div>
 
-  <!-- Class Schedule -->
   <h2 class="section-title">Class Schedule</h2>
   <div class="schedule-row">
     <div class="sched-card glass-card">
@@ -227,13 +173,11 @@
     </div>
   </div>
 
-  <!-- About the Dojo -->
   <section class="glass-card" style="padding:26px; margin-top:30px;">
     <h3>About Our Dojo</h3>
     <p>Shotokan Strength & Power Karate Class is dedicated to teaching traditional Karate with modern training techniques. Our philosophy emphasizes discipline, respect, focus, and personal growth. Students not only learn self-defense but also improve their confidence and physical fitness.</p>
   </section>
 
-  <!-- Benefits of Karate -->
   <section class="glass-card" style="padding:26px; margin-top:30px;">
     <h3>Benefits of Learning Karate</h3>
     <ul>
@@ -245,7 +189,6 @@
     </ul>
   </section>
 
-  <!-- Testimonials -->
   <section class="glass-card" style="padding:26px; margin-top:30px;">
     <h3>What Our Students Say</h3>
     <p>"Joining Shotokan Karate has improved my focus and fitness. The trainers are excellent!" – Neil D.</p>
@@ -254,7 +197,6 @@
     <p>"The dojo environment is welcoming and motivating. Highly recommend!" – Mehul K.</p>
   </section>
 
-  <!-- FAQ Section -->
   <section class="glass-card" style="padding:26px; margin-top:30px; background:#fff; color:#000;">
     <h3>Frequently Asked Questions</h3>
     <select id="faqSelect" style="width:100%; padding:10px; border-radius:6px; margin-top:12px; border:1px solid #ccc;">
@@ -270,66 +212,28 @@
     </div>
   </section>
 
-  <!-- bottom grid -->
   <div class="bottom-grid">
     <div class="gallery-box glass-card">
       <h3>Gallery & Events</h3>
       <div class="gallery-row">
-        <!-- old ones (open in lightbox) -->
+        <!-- images -->
         <div class="thumb" style="background-image:url('https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg')" onclick="openLightbox(0)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg')" onclick="openLightbox(1)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg')" onclick="openLightbox(2)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg')" onclick="openLightbox(3)"></div>
-
-        <!-- new image links (open in lightbox) -->
         <div class="thumb" style="background-image:url('https://i.ibb.co/KzLf1m7m/Whats-App-Image-2025-09-24-at-20-24-54-2b7f3d42.jpg')" onclick="openLightbox(4)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/KPcq9jr/Whats-App-Image-2025-09-10-at-22-07-22-7628431a.jpg')" onclick="openLightbox(5)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/8nDZnStf/Whats-App-Image-2025-09-14-at-13-11-51-6a7b54da.jpg')" onclick="openLightbox(6)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/5W8q57Kn/Whats-App-Image-2025-09-25-at-19-42-37-33c432ee.jpg')" onclick="openLightbox(7)"></div>
 
-        <!-- archive.org video links (open in new tab) -->
-        <a href="https://archive.org/details/whats-app-video-2025-08-01-at-22.28.47-ca-06f-9d-6" target="_blank" rel="noopener noreferrer" title="Video - 2025-08-01">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-09-23-at-20.16.21-a-9ccd-3cc" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-23">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.43-bf-4980e-8" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-09-03-at-23.00.36-e-26050a-1" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-03">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-08-12-at-19.37.03-77501ba-5" target="_blank" rel="noopener noreferrer" title="Video - 2025-08-12">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.49-6b-31f-6ce" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
-        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.44-2557c-455" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
-          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
-            <span class="play">▶</span>
-          </div>
-        </a>
-
+        <!-- videos -->
+        <div class="thumb" onclick="openLightbox(8)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(9)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(10)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(11)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(12)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(13)"><span class="play">▶</span></div>
+        <div class="thumb" onclick="openLightbox(14)"><span class="play">▶</span></div>
       </div>
       <div class="events glass-card">
         <h5>Upcoming Events</h5>
@@ -357,16 +261,14 @@
   © 2025 Shotokan Strength & Power Karate Class. All rights reserved.
 </footer>
 
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
   <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-  <img id="lightboxImg" src="">
+  <div id="lightboxContent"></div>
   <button class="next" onclick="changeSlide(1)">&#10095;</button>
 </div>
 
 <script>
-  /* FAQ */
   const faqData = {
     q1: "We welcome students of all ages, from 5 years old to adults.",
     q2: "Yes, beginners can start anytime. Our classes are structured for all skill levels.",
@@ -376,35 +278,48 @@
   };
   const faqSelect = document.getElementById("faqSelect");
   const faqAnswer = document.getElementById("faqAnswer");
-  faqSelect.addEventListener("change", ()=> {
-    const val = faqSelect.value;
-    faqAnswer.textContent = val ? faqData[val] : "Please select a question to see the answer.";
-  });
+  faqSelect.addEventListener("change", ()=> {const val = faqSelect.value; faqAnswer.textContent = val ? faqData[val] : "Please select a question to see the answer.";});
 
-  /* Lightbox images (includes old + newly added image links). Archive.org video links are opened in a new tab. */
-  const images = [
-    'https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg',
-    'https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg',
-    'https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg',
-    'https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg',
-    'https://i.ibb.co/KzLf1m7m/Whats-App-Image-2025-09-24-at-20-24-54-2b7f3d42.jpg',
-    'https://i.ibb.co/KPcq9jr/Whats-App-Image-2025-09-10-at-22-07-22-7628431a.jpg',
-    'https://i.ibb.co/8nDZnStf/Whats-App-Image-2025-09-14-at-13-11-51-6a7b54da.jpg',
-    'https://i.ibb.co/5W8q57Kn/Whats-App-Image-2025-09-25-at-19-42-37-33c432ee.jpg'
+  const galleryItems = [
+    {type:'image', src:'https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg'},
+    {type:'image', src:'https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg'},
+    {type:'image', src:'https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg'},
+    {type:'image', src:'https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg'},
+    {type:'image', src:'https://i.ibb.co/KzLf1m7m/Whats-App-Image-2025-09-24-at-20-24-54-2b7f3d42.jpg'},
+    {type:'image', src:'https://i.ibb.co/KPcq9jr/Whats-App-Image-2025-09-10-at-22-07-22-7628431a.jpg'},
+    {type:'image', src:'https://i.ibb.co/8nDZnStf/Whats-App-Image-2025-09-14-at-13-11-51-6a7b54da.jpg'},
+    {type:'image', src:'https://i.ibb.co/5W8q57Kn/Whats-App-Image-2025-09-25-at-19-42-37-33c432ee.jpg'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-08-01-at-22.28.47-ca-06f-9d-6/WhatsApp%20Video%202025-08-01%20at%2022.28.47_ca06f9d6.mp4'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-09-23-at-20.16.21-a-9ccd-3cc/WhatsApp%20Video%202025-09-23%20at%2020.16.21_a9ccd3cc.mp4'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-09-18-at-09.40.43-bf-4980e-8/WhatsApp%20Video%202025-09-18%20at%2009.40.43_bf4980e8.mp4'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-09-03-at-23.00.36-e-26050a-1/WhatsApp%20Video%202025-09-03%20at%2023.00.36_e26050a1.mp4'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-08-12-at-19.37.03-77501ba-5/WhatsApp%20Video%202025-08-12%20at%2019.37.03_77501ba5.mp4'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-09-18-at-09.40.49-6b-31f-6ce/WhatsApp%20Video%202025-09-18%20at%2009.40.49_6b31f6ce.mp4'},
+    {type:'image', src:'https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg'},
+    {type:'video', src:'https://archive.org/download/whats-app-video-2025-09-18-at-09.40.49-6b-31f-6ce/WhatsApp%20Video%202025-09-18%20at%2009.40.49_6b31f6ce.mp4'}
   ];
+
   let currentSlide = 0;
   const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxContent = document.getElementById('lightboxContent');
 
   function openLightbox(index){
     currentSlide=index;
     lightbox.style.display='flex';
-    lightboxImg.src=images[currentSlide];
+    showCurrentSlide();
   }
-  function closeLightbox(){lightbox.style.display='none';}
+  function closeLightbox(){lightbox.style.display='none'; lightboxContent.innerHTML='';}
   function changeSlide(n){
-    currentSlide=(currentSlide+n+images.length)%images.length;
-    lightboxImg.src=images[currentSlide];
+    currentSlide=(currentSlide+n+galleryItems.length)%galleryItems.length;
+    showCurrentSlide();
+  }
+  function showCurrentSlide(){
+    const item = galleryItems[currentSlide];
+    if(item.type==='image'){
+      lightboxContent.innerHTML=`<img src="${item.src}" alt="">`;
+    } else if(item.type==='video'){
+      lightboxContent.innerHTML=`<video src="${item.src}" controls autoplay></video>`;
+    }
   }
 </script>
 
