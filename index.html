@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -104,9 +103,14 @@
   .gallery-row {display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap;}
   .thumb {
     width:120px; height:110px; background:var(--grey-box) center/cover no-repeat;
-    border-radius:8px; cursor:pointer; transition:.2s;
+    border-radius:8px; cursor:pointer; transition:.2s; overflow:hidden;
+    display:inline-block;
   }
   .thumb:hover {transform:scale(1.05);}
+  .thumb .play {
+    font-size:28px; color:#fff; background:rgba(214,27,27,0.95); padding:6px 10px; border-radius:8px;
+    display:inline-block;
+  }
   .events {padding:18px; color:#fff; margin-top:8px;}
   .events h5 {margin:0 0 10px; font-weight:700;}
   .events ul {margin-left:18px; color:#ffd6d6;}
@@ -219,7 +223,7 @@
     </div>
     <div class="sched-card glass-card">
       <h4>Notes</h4>
-      <ul><li>You can choose any one hour time slot</li><li>Sunday will be a holiday for relaxation of muscles and body</li><li>In our class, we make students strong. They will not only learn karate here, they will learn self defense.we will make them strong by conditioning. Power practice for increasing stamina and more.</li><li>All ages welcome</li></ul>
+      <ul><li>You can choose any one hour time slot</li><li>Sunday will be a holiday for relaxation of muscles and body</li></ul>
     </div>
   </div>
 
@@ -245,7 +249,7 @@
   <section class="glass-card" style="padding:26px; margin-top:30px;">
     <h3>What Our Students Say</h3>
     <p>"Joining Shotokan Karate has improved my focus and fitness. The trainers are excellent!" – Neil D.</p>
- <p>"This is the best training for self defense!" – Somya C.</p>
+    <p>"This is the best training for self defense!" – Somya C.</p>
     <p>"My daughter loves the classes and has gained confidence and discipline." – Priya M.</p>
     <p>"The dojo environment is welcoming and motivating. Highly recommend!" – Mehul K.</p>
   </section>
@@ -271,10 +275,61 @@
     <div class="gallery-box glass-card">
       <h3>Gallery & Events</h3>
       <div class="gallery-row">
+        <!-- old ones (open in lightbox) -->
         <div class="thumb" style="background-image:url('https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg')" onclick="openLightbox(0)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg')" onclick="openLightbox(1)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg')" onclick="openLightbox(2)"></div>
         <div class="thumb" style="background-image:url('https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg')" onclick="openLightbox(3)"></div>
+
+        <!-- new image links (open in lightbox) -->
+        <div class="thumb" style="background-image:url('https://i.ibb.co/KzLf1m7m/Whats-App-Image-2025-09-24-at-20-24-54-2b7f3d42.jpg')" onclick="openLightbox(4)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/KPcq9jr/Whats-App-Image-2025-09-10-at-22-07-22-7628431a.jpg')" onclick="openLightbox(5)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/8nDZnStf/Whats-App-Image-2025-09-14-at-13-11-51-6a7b54da.jpg')" onclick="openLightbox(6)"></div>
+        <div class="thumb" style="background-image:url('https://i.ibb.co/5W8q57Kn/Whats-App-Image-2025-09-25-at-19-42-37-33c432ee.jpg')" onclick="openLightbox(7)"></div>
+
+        <!-- archive.org video links (open in new tab) -->
+        <a href="https://archive.org/details/whats-app-video-2025-08-01-at-22.28.47-ca-06f-9d-6" target="_blank" rel="noopener noreferrer" title="Video - 2025-08-01">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-09-23-at-20.16.21-a-9ccd-3cc" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-23">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.43-bf-4980e-8" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-09-03-at-23.00.36-e-26050a-1" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-03">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-08-12-at-19.37.03-77501ba-5" target="_blank" rel="noopener noreferrer" title="Video - 2025-08-12">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.49-6b-31f-6ce" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
+        <a href="https://archive.org/details/whats-app-video-2025-09-18-at-09.40.44-2557c-455" target="_blank" rel="noopener noreferrer" title="Video - 2025-09-18">
+          <div class="thumb" style="display:flex;align-items:center;justify-content:center;">
+            <span class="play">▶</span>
+          </div>
+        </a>
+
       </div>
       <div class="events glass-card">
         <h5>Upcoming Events</h5>
@@ -294,7 +349,6 @@
         <button class="btn-whatsapp" onclick="window.open('https://wa.me/919993825365','_blank')">WhatsApp Us</button>
         <button class="btn-instagram" onclick="window.open('https://www.instagram.com/strength_and_power_karate_/','_blank')">Instagram</button>
       </div>
-      
     </div>
   </div>
 </main>
@@ -327,16 +381,21 @@
     faqAnswer.textContent = val ? faqData[val] : "Please select a question to see the answer.";
   });
 
-  /* Lightbox */
+  /* Lightbox images (includes old + newly added image links). Archive.org video links are opened in a new tab. */
   const images = [
     'https://i.ibb.co/ZRcFKzMn/Whats-App-Image-2025-09-18-at-09-40-47-6f386696.jpg',
     'https://i.ibb.co/qFkZWG8Z/Whats-App-Image-2025-09-18-at-09-40-47-e1ec7f00.jpg',
     'https://i.ibb.co/Fbmgk3DG/Whats-App-Image-2025-09-18-at-09-40-44-fa397c32.jpg',
-    'https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg'
+    'https://i.ibb.co/XZ57zPL6/Whats-App-Image-2025-09-18-at-09-40-45-04d33e79.jpg',
+    'https://i.ibb.co/KzLf1m7m/Whats-App-Image-2025-09-24-at-20-24-54-2b7f3d42.jpg',
+    'https://i.ibb.co/KPcq9jr/Whats-App-Image-2025-09-10-at-22-07-22-7628431a.jpg',
+    'https://i.ibb.co/8nDZnStf/Whats-App-Image-2025-09-14-at-13-11-51-6a7b54da.jpg',
+    'https://i.ibb.co/5W8q57Kn/Whats-App-Image-2025-09-25-at-19-42-37-33c432ee.jpg'
   ];
   let currentSlide = 0;
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
+
   function openLightbox(index){
     currentSlide=index;
     lightbox.style.display='flex';
@@ -351,5 +410,3 @@
 
 </body>
 </html>
-
-
