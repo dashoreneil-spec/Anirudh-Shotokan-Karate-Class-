@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -131,6 +134,25 @@
   #faqAnswer {transition:all 0.3s;}
 
   @media (max-width:1000px) {.two-col {grid-template-columns:1fr;} .hero-right {width:160px; height:160px;} .bottom-grid {grid-template-columns:1fr;} .header {padding:16px 20px;} .container {padding:0 18px;} .headline {font-size:36px;}}
+
+/* WhatsApp & Instagram button hover animation */
+.contact-actions button {
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+}
+
+/* WhatsApp hover effect */
+.contact-actions .btn-whatsapp:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px #25d366, 0 0 30px #25d366;
+}
+
+/* Instagram hover effect */
+.contact-actions .btn-instagram:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px #e1306c, 0 0 30px #e1306c;
+}
+
 </style>
 </head>
 <body>
@@ -346,6 +368,5 @@
 
 </body>
 </html>
-
 
 
